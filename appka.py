@@ -15,9 +15,10 @@ def load_model():
 try:
     model = load_model()
     model_loaded = True
-except Exception:
-    st.error("Model sa nepodarilo načítať. Nahrajte súbor 'best_decision_tree_model.pkl' do pracovného priečinka.")
+except Exception as e:
+    st.error(f"❌ Nepodarilo sa načítať model: {e}")
     model_loaded = False
+
 
 # Словарь для отображения читаемых названий
 labels = {
