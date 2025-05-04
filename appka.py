@@ -10,7 +10,7 @@ st.markdown("Vyplňte formulár nižšie a kliknite na **Predikovať**, aby ste 
 
 @st.cache_resource
 def load_model():
-    return joblib.load("best_decision_tree_model.pkl")
+    return joblib.load("hut-app/best_decision_tree_model.pkl")
 
 try:
     model = load_model()
